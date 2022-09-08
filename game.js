@@ -21,3 +21,29 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let scorePlayer = 0;
+    let scoreComputer = 0;
+    for (let i = 0; i < 5; i++) {
+        let playerChoice = prompt("Enter your choice").toLowerCase();
+        let result = playRound(playerChoice, getComputerChoice());
+        console.log(result);
+        if (result.startsWith("You win")) {
+            scorePlayer++;
+        }
+        else if (result.startsWith("You lose")) {
+            scoreComputer++;
+        }
+    }
+    if (scorePlayer > scoreComputer) {
+        console.log("You win");
+    }
+    else if (scorePlayer === scoreComputer) {
+        console.log("Draw");
+    }
+    else {
+        console.log("You lose");
+    }
+}
+
+game();
