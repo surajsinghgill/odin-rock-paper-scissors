@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <h1>ROCK PAPER SCISSORS</h1>
+    <h2>First to score 5 points win the game</h2>
+    <div id="result-container">
+        <div class="flex-item-score">
+            <p>You: <span class="score">0</span></p>
+        </div>
+        <div class="flex-item-score">
+            <p>Computer: <span class="score">0</span></p>
+        </div>
+        <div id="flex-item-round">
+            <p></p>
+        </div>
+        <div class="flex-item">
+            <img src="./images/question-mark.png" alt="question mark" id="player">
+        </div>
+        <div class="flex-item">
+            <img src="./images/question-mark.png" alt="question mark" id="computer">
+        </div>
+    </div>
+    <p class="choice">Pick your choice</p>
+    <div id="container">
+        <button id="rock" class="button">
+            <img src="./images/fist.png" alt="rock"><br>
+            <span class="button-title">Rock</span>
+        </button>
+        <button id="paper" class="button">
+            <img src="./images/hand.png" alt="paper"><br>
+            <span class="button-title">Paper</span>
+        </button>
+        <button id="scissors" class="button">
+            <img src="./images/scissor.png" alt="scissors"><br>
+            <span class="button-title">Scissors</span>
+        </button>
+    </div>
+    <div id="modal">
+        <div id="modal-container">
+            <p class="content"></p>
+            <p class="close">&times;</p>
+        </div>
+    </div>
     <script src="./game.js"></script>
 </body>
 </html>
